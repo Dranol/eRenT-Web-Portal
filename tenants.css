@@ -1,0 +1,502 @@
+@import url('https://fonts.googleapis.com/css2?family=Maitree:wght@200;300;400;500;600;700&family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap');
+.roboto-flex{
+  font-family: "Roboto Flex", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  margin: 0;
+  padding: 0;
+  box-shadow: border-box;
+}
+
+:root {
+  --blue: #2a2185;
+  --white:#fff;
+  --grey:dimgrey;
+  --blacka:#222;
+  --blackb:#999;
+}
+
+body {
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+}
+
+/*---navigation --*/
+
+.navigation {
+  position: fixed;
+  width: 300px;
+  height: 100%;
+  background: var(--blue);
+  border-left: 1px solid var(--blue);
+  transition: 0.5;
+  overflow: hidden;
+}
+
+.navigation.active{
+  width: 105px;
+}
+
+.navigation ul {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.navigation ul li {
+  position: relative;
+  list-style: none;
+  width: 100%;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+  margin-bottom: 60px;
+}
+
+.navigation ul li:hover {
+  background-color: var(--white);
+}
+
+.navigation ul li:nth-child(1){
+  margin-bottom: 30px;
+  pointer-events: none;
+}
+
+.navigation ul li a {
+  position: relative;
+  display: block;
+  width: 100%;
+  display: flex;
+  text-decoration: none;
+  color: var(--white);
+}
+
+.navigation ul li:hover a {
+  color: var(--blue);
+}
+
+.navigation ul li a .icon {
+  position: relative;
+  display: block;
+  padding: 0;
+  min-width: 60px;
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+}
+
+.navigation ul li a .icon ion-icon{
+  font-size: 2rem;
+}
+
+.navigation ul li a .title{
+  position: relative;
+  display: block;
+  padding: 0 5px;
+  height: 60px;
+  line-height: 60px;
+  text-align: start;
+  white-space: nowrap;
+}
+
+  /* --->Main<-- */
+
+.main{
+  position: absolute;
+  width: calc(100% - 300px);
+  left: 300px;
+  min-height: 100vh;
+  background: var(--white);
+  transition: 0.5s;
+  color: ;
+}
+
+.main.active {
+  width: calc(100% - 300px);
+  left: 105px;
+}
+
+.topbar{
+  width: 100%;
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+}
+
+.toggle{
+  position: relative;
+  top: 0;
+  width: 60px;
+  background: var(--white);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.5rem;
+  cursor: pointer;
+  color: var(--blue);
+}
+
+.search{
+  position: relative;
+  width: 400px;
+  margin: 0 40px;
+}
+
+.search label{
+  position: relative;
+  width: 100%;
+}
+
+.search label input{
+  width: 100%;
+  height: 40px;
+  border-radius: 10px;
+  padding: 5px 20px;
+  padding-left: 35px;
+  font-size: 18px;
+  outline: none;
+  border: 2.7px solid var(--blue);
+  color: var(--blue);
+}
+
+.search label ion-icon{
+  position: absolute;
+  top: 0;
+  left: 10px;
+  font-size: 1.5rem;
+}
+
+.search h2 {
+  color: var(--blackb);
+}
+
+.user{
+  position: relative;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.user img{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+    /* --->Cards designing<--  */
+    
+.cardBox{
+  position: relative;
+  width: 100%;
+  padding: 1px;
+  margin-top: 10px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr) ;
+  grid-gap: 20px;
+}
+
+.cardBox .card{
+  position: relative;
+  background: var(--white);
+  padding: 30px;
+  border-radius: 20px;
+  justify-content: space-;
+  margin-left: 10px;
+  cursor: pointer;
+  display: flex;
+  box-shadow: 2px 2px 6px 2px var(--blue);
+}
+
+.cardBox .card hr {
+  color: blueviolet;
+  height: 80%;
+  margin: 0;
+  margin-left: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.cardBox .card .numbers {
+  position: relative;
+  font-weight: 300;
+  font-size: 1.7rem;
+  color: var(--blue);
+}
+
+.cardBox .card .cardName {
+  color: var(--blackb);
+  font-size: 1.3rem;
+  margin-top: 5px;
+}
+
+.cardBox .card .numbers h2{
+  position: relative;
+  font-weight: 300;
+  font-size: 1.7rem;
+  color: var(--blue);
+}
+
+.cardBox .card .numbers h2:hover {
+  color: var(--white);
+  background: var(--blue);
+}
+
+.cardBox .card .iconBox {
+  font-size: 3rem;
+  color: var(--blackb);
+}
+
+.cardBox .card:hover {
+  background: var(--blue);
+  color: var(--white);
+}
+
+.cardBox .card:hover .cardName,
+.cardBox .card:hover .numbers,
+.cardBox .card:hover .iconBox {
+  color: var(--white);
+}
+
+/* --->Payments Section Design<-- */
+
+.details {
+  position: relative;
+  width: 100%;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  margin-top: 40px;
+}
+
+.details .paySection {
+  position: relative;
+  display: grid;
+  min-height: 500px;
+  min-width: 529px;
+  background: var(--white);
+  padding: 20px;
+  box-shadow: 2px 2px 2px 2px blueviolet;
+  border-radius: 10px;
+  width: 100%;
+  margin-top: 10px;
+
+}
+
+.details .cardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 700;
+  font-size: 1.4rem;
+  margin-bottom: 20px;
+  color: var(--blue);
+  text-decoration-style: wavy;
+}
+
+.details .paySection .otherNo #givenNumber {
+  accent-color: blueviolet;
+}
+
+.details .paySection .otherNo {
+  color: var(--blue);
+  font-size: 1.2rem;
+}
+
+.details .paySection .otherNo .otherTxbx{
+  width: 49%;
+  height: 18px;
+  border-radius: 8px;
+  padding: 7px;
+  margin-top: 10px;
+  font-size: 1.2rem;
+  outline: none;
+  border: 2.7px solid var(--blue);
+  color: var(--blue);
+}
+
+.details .paySection .otherNo .amountTxbx{
+  width: 48%;
+  height: 18px;
+  border-radius: 8px;
+  padding: 8px;
+  margin-top: 10px;
+  font-size: 1.2rem;
+  outline: none;
+  border: 2.7px solid var(--blue);
+  color: var(--blue);
+}
+
+.details .paySection .otherNo h3 {
+  position: relative;
+  font-weight: 500;
+  font-size: 1.2rem;
+  color: var(--blue);
+}
+
+.details .paySection #button {
+  color: var(--white);
+  background: var(--blue);
+  padding: 10px;
+  margin: 5px;
+  font-size: 0.9rem;
+  border-radius: 7px;
+  border: 1px solid blueviolet;
+  cursor: progress;
+  float: right;
+  margin-right: 18%;
+}
+
+.details .paySection #button:hover {
+  color: var(--blue);
+  background: var(--white);
+  border: 2px solid blueviolet;
+  padding: 12px;
+}
+
+.details .paySection hr {
+  color: blueviolet;
+}
+
+.recenTransactions {
+  position: relative;
+  display: grid;
+  min-height: 500px;
+  padding: 10px;
+  box-shadow: 0 2px 2px 2px blueviolet;
+  margin: 30px;
+  margin-top: 70px;
+  border-radius: 7px;
+  width: 69%;
+}
+
+.recenTransactions .cardHeader {
+  display: flex;
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: var(--blue);
+}
+
+.recenTransactions table tr:hover {
+  background: var(--blue);
+  color: var(--white);
+}
+
+.recenTransactions table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+.recenTransactions table thead td{
+  font-weight: 600;
+}
+
+.recenTransactions table tr {
+  color: var(--blue);
+  border-bottom: 0.1px solid blueviolet;
+}
+
+.recenTransactions table tr:last-child {
+  border-bottom: none;
+}
+
+.recenTransactions table tr td {
+  padding: 10px;
+}
+
+.recenTransactions table tr td:last-child {
+  text-align: end;
+}
+
+.recenTransactions table tr td:last-child(2) {
+  text-align: end;
+}
+
+.recenTransactions table tr td:last-child(3) {
+  text-align: center;
+}
+
+
+@media (max-width: 991px) {
+  .navigation {
+    left: -300px;
+  }
+
+  .navigation .active {
+    width: 300px;
+    left: 0;
+  }
+
+  .main {
+    width: 100%;
+    left: 0;
+  }
+
+  .main.active {
+    left: 300px;
+  }
+
+  .cardBox {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .recenTransactions {
+    grid-template-columns: 1fr;
+  }
+
+  .recenTransactions {
+    overflow-x: auto;
+  }
+
+}
+
+@media (max-width: 480px) {
+  .cardBox {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .cardHeader {
+    font-size: 20px;
+  }
+
+  .user {
+    min-width: 40px;
+  }
+
+  .navigation {
+    width: 100%;
+    left: -100%;
+    z-index: 1000;
+  }
+
+  .navigation.active {
+    width: 100%;
+    left: 0;
+  }
+
+  .toggle {
+    z-index: 1000;
+  }
+
+  .main .active .toggle {
+    color: grey;
+    position: fixed;
+    right: 0;
+    left: initial;
+  }
+  
+}
